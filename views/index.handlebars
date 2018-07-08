@@ -4,7 +4,7 @@
 
 <h3>Items that are available!</h3>
 
-<ul>
+<ul class= "availableList">
   {{#each items}}
     {{#unless purchased}}
       {{> items/item-block purchase=true}}
@@ -14,7 +14,7 @@
 
 <h3>Items you are borrowing!</h3>
 
-<ul>
+<ul class= "rentedList">
   {{#each items}}
     {{#if purchased}}
       {{> items/item-block purchase=false}}
@@ -43,5 +43,6 @@
 
   <button type="submit">Add Item</button>
 </form>
+<br>
 
 {{> items/footer}}
