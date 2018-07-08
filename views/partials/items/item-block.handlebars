@@ -1,0 +1,9 @@
+<li>
+	{{item_name}}: {{price}}
+
+	<button class="change-purchase" data-id="{{id}}" data-newpurchase="{{purchase}}">
+		{{#if purchase}}RENT!{{else}}RETURN!{{/if}}
+	</button>
+
+	<button class="delete-item" data-id="{{this.id}}">DELETE!</button>
+</li>
