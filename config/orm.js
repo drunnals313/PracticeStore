@@ -29,7 +29,7 @@ function objToSql(ob) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
+      // e.g. {name: 'Lana Del Grey'} =>["name='Lana Del Grey'"]
       // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(key + "=" + value);
     }
@@ -38,7 +38,6 @@ function objToSql(ob) {
   // translate array of strings to a single comma-separated string
   return arr.toString();
 }
-
 // Object for all our SQL statement functions.
 var orm = {
   all: function(tableInput, cb) {
@@ -59,14 +58,12 @@ var orm = {
     queryString += "VALUES (";
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
-
     console.log(queryString);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },

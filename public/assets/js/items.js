@@ -26,7 +26,7 @@ $(function() {
     event.preventDefault();
 
     var newItem = {
-      item_name: $("#ca").val().trim(),
+      item_name: $("#ia").val().trim(),
       price: $("#pa").val().trim(),
       purchased: $("[name=purchased]:checked").val().trim()
     };
